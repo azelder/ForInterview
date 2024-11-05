@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "FetchHiring"
 include(":app")
- 
+include(":core:network")
+include(":core:model")
