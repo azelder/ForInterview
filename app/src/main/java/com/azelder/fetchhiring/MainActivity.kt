@@ -10,20 +10,28 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.lifecycleScope
 import com.azelder.fetchhiring.ui.theme.FetchHiringTheme
+import com.example.data.FetchHiringRepository
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
-//    @Inject
-//    lateinit var repository: FetchHiringRepository
+    @Inject
+    lateinit var repository: FetchHiringRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-//        println(repository.getHiringList())
+        // TODO Remove. Temp to verify we are getting data back
+        lifecycleScope.launch  {
+            repository.getHiringList().collect {
+                println(it)
+            }
+        }
 
         setContent {
             FetchHiringTheme {

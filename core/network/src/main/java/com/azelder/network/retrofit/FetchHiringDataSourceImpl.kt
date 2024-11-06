@@ -16,7 +16,7 @@ interface FetchHiringDataSourceApi {
 }
 
 @Singleton
-internal class FetchHiringDataSourceImpl @Inject constructor() : FetchHiringDataSource {
+class FetchHiringDataSourceImpl @Inject constructor() : FetchHiringDataSource {
 
     private val networkClient = Retrofit.Builder()
         .baseUrl(BASE_URL)
