@@ -12,11 +12,19 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.azelder.fetchhiring.ui.theme.FetchHiringTheme
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+
+//    @Inject
+//    lateinit var repository: FetchHiringRepository
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+//        println(repository.getHiringList())
+
         setContent {
             FetchHiringTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
