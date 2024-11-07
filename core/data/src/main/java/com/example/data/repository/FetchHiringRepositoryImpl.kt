@@ -17,6 +17,8 @@ class FetchHiringRepositoryImpl @Inject constructor(
         flow {
             emit(
                 datasource.getHiringList()
+
+                // TODO here is where we can put the filtering
             )
         }.flowOn(Dispatchers.IO)
 }

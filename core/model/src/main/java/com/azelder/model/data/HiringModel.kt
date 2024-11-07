@@ -8,5 +8,5 @@ package com.azelder.model.data
 data class HiringModel(
     val id: Int,
     val listId: String,
-    val name: String
+    val name: String?
 )

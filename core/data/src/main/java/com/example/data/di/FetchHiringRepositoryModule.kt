@@ -15,4 +15,5 @@ interface FetchHiringRepositoryModule {
     fun bindFetchHiringRepository(
         fetchHiringRepositoryImpl: FetchHiringRepositoryImpl
     ): FetchHiringRepository
+
 }
