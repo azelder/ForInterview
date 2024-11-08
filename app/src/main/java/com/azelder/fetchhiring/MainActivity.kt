@@ -20,7 +20,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-
             /**
              * In a full sized application, this would be moved to a fragment or navigation graph
              * component. Since we are only having one screen then more complex screen flow handling

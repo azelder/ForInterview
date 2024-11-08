@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 interface FetchHiringRepository {
 
     /**
-     * Returns the list of hiring candidates
+     * Returns the list of items
      */
-    fun getHiringList(): Flow<List<HiringModel>>
+    fun getHiringList(): Flow<Map<String, List<HiringModel>>>
 }

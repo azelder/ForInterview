@@ -27,5 +27,5 @@ class MainListViewModel @Inject constructor(
 
 sealed interface MainListUiState {
     data object Loading : MainListUiState
-    data class Success(val hiringList: List<HiringModel>) : MainListUiState
+    data class Success(val hiringList: Map<String, List<HiringModel>>) : MainListUiState
 }

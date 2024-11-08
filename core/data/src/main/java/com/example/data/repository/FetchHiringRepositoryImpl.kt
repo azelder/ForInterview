@@ -13,12 +13,16 @@ class FetchHiringRepositoryImpl @Inject constructor(
     private val datasource: FetchHiringDataSource
 ) : FetchHiringRepository {
 
-    override fun getHiringList(): Flow<List<HiringModel>> =
+    override fun getHiringList(): Flow<Map<String, List<HiringModel>>> =
         flow {
             emit(
                 datasource.getHiringList()
-
-                // TODO here is where we can put the filtering
+                    .filter { it.name?.isNotEmpty() == true }
+                    // NOTE: Here the instructions are to sort by "listId" and then by "name".
+                    // The name is just "Item x" where x is the id of the item. To simplify I'm just
+                    // sorting by the id of the item after sorting by listId
+                    .sortedWith(compareBy({ it.listId }, { it.id }))
+                    .groupBy { it.listId }
             )
         }.flowOn(Dispatchers.IO)
 }
