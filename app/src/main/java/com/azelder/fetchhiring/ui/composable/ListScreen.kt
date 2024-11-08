@@ -28,7 +28,6 @@ import com.azelder.fetchhiring.MainListViewModel
 import com.azelder.fetchhiring.R
 import com.azelder.model.data.ItemModel
 
-
 @Composable
 fun ListScreen(
     viewModel: MainListViewModel
@@ -37,13 +36,12 @@ fun ListScreen(
     when (list) {
         is MainListUiState.Loading -> {
             Text(
-                text = "Loading...",
+                text = stringResource(id = R.string.loading),
                 modifier = Modifier.padding(16.dp)
             )
         }
 
         is MainListUiState.Success -> {
-            // TODO: double check why this smart cast isn't working
             val hiringList = (list as MainListUiState.Success).hiringList
             LazyColumn(
                 modifier = Modifier
@@ -54,6 +52,8 @@ fun ListScreen(
                     ItemRowHeader()
                 }
                 hiringList.keys.forEach { key ->
+                    // With more time, I would look for a better way to handle this since this is technically O(n^2).
+                    // In a real world scenario I would work with the API to send us this info sorted rather than doing this locally.
                     hiringList[key]?.forEach {
                         item {
                             ItemRow(it)

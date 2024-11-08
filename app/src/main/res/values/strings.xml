@@ -3,4 +3,5 @@
     <string name="item_id">Item ID</string>
     <string name="item_name">Name</string>
     <string name="list_id">ID</string>
+    <string name="loading">Loading…</string>
 </resources>
