@@ -1,6 +1,6 @@
 package com.example.data.repository
 
-import com.azelder.model.data.HiringModel
+import com.azelder.model.data.ItemModel
 import com.azelder.network.FetchHiringDataSource
 import com.example.data.FetchHiringRepository
 import kotlinx.coroutines.Dispatchers
@@ -13,7 +13,7 @@ class FetchHiringRepositoryImpl @Inject constructor(
     private val datasource: FetchHiringDataSource
 ) : FetchHiringRepository {
 
-    override fun getHiringList(): Flow<Map<String, List<HiringModel>>> =
+    override fun getHiringList(): Flow<Map<String, List<ItemModel>>> =
         flow {
             emit(
                 datasource.getHiringList()

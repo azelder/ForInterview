@@ -2,7 +2,7 @@ package com.azelder.fetchhiring
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.azelder.model.data.HiringModel
+import com.azelder.model.data.ItemModel
 import com.example.data.FetchHiringRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
@@ -27,5 +27,5 @@ class MainListViewModel @Inject constructor(
 
 sealed interface MainListUiState {
     data object Loading : MainListUiState
-    data class Success(val hiringList: Map<String, List<HiringModel>>) : MainListUiState
+    data class Success(val hiringList: Map<String, List<ItemModel>>) : MainListUiState
 }

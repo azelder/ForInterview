@@ -1,6 +1,6 @@
 package com.azelder.network.retrofit
 
-import com.azelder.model.data.HiringModel
+import com.azelder.model.data.ItemModel
 import com.azelder.network.FetchHiringDataSource
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -11,7 +11,7 @@ import javax.inject.Singleton
 interface FetchHiringDataSourceApi {
 
     @GET("/hiring.json")
-    suspend fun getHiringList() : List<HiringModel>
+    suspend fun getHiringList() : List<ItemModel>
 
 }
 
@@ -24,7 +24,7 @@ class FetchHiringDataSourceImpl @Inject constructor() : FetchHiringDataSource {
         .build()
         .create(FetchHiringDataSourceApi::class.java)
 
-    override suspend fun getHiringList(): List<HiringModel> = networkClient.getHiringList()
+    override suspend fun getHiringList(): List<ItemModel> = networkClient.getHiringList()
 
     companion object {
         // would move this to a config file

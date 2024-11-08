@@ -5,7 +5,7 @@ package com.azelder.model.data
  * just for the data but it does enforce best practices with the dependency hierarchy and is good to
  * have for extensibility
  */
-data class HiringModel(
+data class ItemModel(
     val id: Int,
     val listId: String,
     val name: String?

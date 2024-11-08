@@ -26,7 +26,7 @@ import androidx.compose.ui.unit.sp
 import com.azelder.fetchhiring.MainListUiState
 import com.azelder.fetchhiring.MainListViewModel
 import com.azelder.fetchhiring.R
-import com.azelder.model.data.HiringModel
+import com.azelder.model.data.ItemModel
 
 
 @Composable
@@ -127,7 +127,7 @@ private fun PreviewItemRowHeader() {
 }
 
 @Composable
-private fun ItemRow(it: HiringModel) {
+private fun ItemRow(it: ItemModel) {
     Row(
         modifier = Modifier
             .padding(8.dp)
@@ -169,7 +169,7 @@ private fun ItemRow(it: HiringModel) {
 @Preview
 @Composable
 private fun PreviewItemRow() {
-    val hiringModel = HiringModel(1, "1", "name")
-    ItemRow(hiringModel)
+    val itemModel = ItemModel(1, "1", "name")
+    ItemRow(itemModel)
 }
 
