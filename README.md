@@ -1,10 +1,10 @@
-# FetchHiring
+# TakeHomeTest App
 
-## App is part of the take home for application with Fetch
+## App is part of a take home for application
 
 ## Tools used: Compose, Hilt, Retrofit, Coroutines, Flow, Multi-module
 
-## Things I would add with more time: navigation for multi-screen, tests, further error handling, more refined UI, more compose previews, and more! 
+## Things I could add : Much less basic UI, navigation for multi-screen, tests, further error handling, more refined UI, more compose previews, and more! 
 
 ## Screenshot
 ![Screenshot](images/screenshot.png)
