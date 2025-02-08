@@ -1,6 +1,6 @@
 # TakeHomeTest App
 
-## App is part of a take home for application
+## App is part of a take home application
 
 ## Tools used: Compose, Hilt, Retrofit, Coroutines, Flow, Multi-module
 
