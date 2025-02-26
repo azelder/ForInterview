@@ -1,6 +1,6 @@
-# TakeHomeTest App
+# Playground App
 
-## App is part of a take home application
+## Playing around with a few things, creating from scratch an app to show a list 
 
 ## Tools used: Compose, Hilt, Retrofit, Coroutines, Flow, Multi-module
 
